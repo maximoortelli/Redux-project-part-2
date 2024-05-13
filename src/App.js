@@ -3,13 +3,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import CantidadPokemon from './components/CantidadPokemon';
 import CompraPokemon from './components/CompraPokemon'
+
 import store from './redux/store';
+import { Provider } from "react-redux"
 
 function App() {
-
-  console.log(store.getState());
-
   return (
+  <Provider store={store}>
     <div className="App container">
       <div className='row'>
         <div className='col-12'>
@@ -33,6 +33,7 @@ function App() {
         </div>
       </div>
     </div>
+  </Provider>
   );
 }
 
